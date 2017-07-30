@@ -1,0 +1,14 @@
+//This is a macro I use on every single character I play (extensively). It's the result of several years of tweaking and works perfectly for me.
+
+//The idea is that if there is a mouseover, we focus that. If there is no mouseover but there is a target, we focus that instead. If neither exist or we are holding shift or alt, we clear focus.
+
+//If we're holding control, the target and focus are swapped. This works with no focus or no target exactly as expected. This took a lot of thought to make work within the boundaries of WoW macro and I'm excessively proud of it.
+
+/clearfocus [nomod:ctrl]
+/focus [@mouseover,exists,nomod][nomod]
+/stopmacro [nomod:ctrl]
+/cleartarget [@focus,noexists]
+/target focus
+/targetlasttarget
+/focus
+/targetlasttarget
