@@ -8,14 +8,14 @@
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
-;Initialize the array we'll hold queued inputs in as queue.
-;Then loop our play label as quickly as possible.
+; Initialize the array we'll hold queued inputs in as queue.
+; Then loop our play label as quickly as possible.
 queue := []
 SetTimer, play, 1
 return
 
-;Every unique value between 0 and 23 pushed to queue[] corresponds to a different note.
-;(The notes at value 7 and 8 are the same and the ones at 15 and 16 are the same. There's 22 total notes, not 24. That's not on me!)
+; Every unique value between 0 and 23 pushed to queue[] corresponds to a different note.
+; (The notes at value 7 and 8 are the same and the ones at 15 and 16 are the same. There's 22 total notes, not 24. That's not on me!)
 q::queue.Push(0)
 w::queue.Push(1)
 e::queue.Push(2)
@@ -43,14 +43,14 @@ n::queue.Push(21)
 m::queue.Push(22)
 ,::queue.Push(23)
 
-;This lets us loop play() with SetTimer.
+; This lets us loop play() with SetTimer.
 play:
 	play()
 Return
 
-;Checks for all notes flagged to be played.
-;Then, plays them staggered so the GW2 client actually catches all the input.
-;This is a problem when playing different octaves simultaneously, especially when the same note is being hit.
+; Checks for all notes flagged to be played.
+; Then, plays them staggered so the GW2 client actually catches all the input.
+; This is a problem when playing different octaves simultaneously, especially when the same note is being hit.
 play() {
 	global queue
 	len := queue.Length()
@@ -97,8 +97,8 @@ play() {
 	}
 }
 
-;This function takes some input that represents a note and maps it to the proper key.
-;In this case, F1-8 are bound to the 1-8 skills on the skillbar, respectively.
+; This function takes some input that represents a note and maps it to the proper key.
+; In this case, F1-8 are bound to the 1-8 skills on the skillbar, respectively.
 note(x) {
 	y := Mod(x, 8)
 	if (y == 0)

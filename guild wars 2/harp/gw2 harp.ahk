@@ -10,8 +10,8 @@
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
-;Middle octave keys.
-;No octave switching required.
+; Middle octave keys.
+; No octave switching required.
 a::Send {F1}
 s::Send {F2}
 d::Send {F3}
@@ -21,8 +21,8 @@ h::Send {F6}
 j::Send {F7}
 k::Send {F8}
 
-;Low octave keys.
-;Swap to low octave, play note, swap back to middle octave.
+; Low octave keys.
+; Swap to low octave, play note, swap back to middle octave.
 q::Send {F9}{F1}{F10}
 w::Send {F9}{F2}{F10}
 e::Send {F9}{F3}{F10}
@@ -32,8 +32,8 @@ y::Send {F9}{F6}{F10}
 u::Send {F9}{F7}{F10}
 i::Send {F9}{F8}{F10}
 
-;High octave keys.
-;Same as low octave except to high back to middle.
+; High octave keys.
+; Same as low octave except to high back to middle.
 z::Send {F10}{F1}{F9}
 x::Send {F10}{F2}{F9}
 c::Send {F10}{F3}{F9}
