@@ -56,9 +56,9 @@ play() {
 	len := queue.Length()
 	
 	if (len > 0) {
-		;The smaller this delay is, the more responsive the controls are.
-		;If it gets too small however, the staggering effect doesn't work.
-		;50 seems to be a good balance point.
+		; The smaller this delay is, the more responsive the controls are.
+		; If it gets too small however, the staggering effect doesn't work.
+		; 50 seems to be a good balance point.
 		delay := 50
 	
 		;Sorting the queued inputs into octaves to minimize button pushes.
