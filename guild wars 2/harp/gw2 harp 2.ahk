@@ -61,7 +61,7 @@ play() {
 		; 50 seems to be a good balance point.
 		delay := 50
 	
-		;Sorting the queued inputs into octaves to minimize button pushes.
+		; Sorting the queued inputs into octaves to minimize button pushes.
 		low := []
 		mid := []
 		high := []
